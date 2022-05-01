@@ -56,7 +56,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8081",
 ]
 
+<<<<<<< HEAD
 CSRF_TRUSTED_ORIGINS = ["http://localhost:1337", "http://localhost:80", "http://localhost:8000"]
+=======
+CSRF_TRUSTED_ORIGINS = ["http://localhost:1337", "http://localhost:80", "http://localhost:8000" ]
+>>>>>>> 281c0755c44b15488398357ce01f15670db4516d
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
