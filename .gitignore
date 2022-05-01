@@ -12,7 +12,7 @@ local_settings.py
 
 *.pyc 
 
-.idea
+.idea/*
 
 !*media/.gitkeep  
 media/*
@@ -31,3 +31,5 @@ doc-dev
 
 
 
+.idea/workspace.xml
+.idea/workspace.xml
