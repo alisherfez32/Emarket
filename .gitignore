@@ -13,9 +13,10 @@ local_settings.py
 *.pyc 
 
 .idea/*
+.idea
 
-!*media/.gitkeep  
-media/*
+#!*media/.gitkeep
+#media/*
 
 log/debug.log  
 
@@ -33,3 +34,4 @@ doc-dev
 
 .idea/workspace.xml
 .idea/workspace.xml
+.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2022_16_58_\[Changes\]/Antigua
