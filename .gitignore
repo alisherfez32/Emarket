@@ -15,8 +15,8 @@ local_settings.py
 .idea/*
 .idea
 
-#!*media/.gitkeep
-#media/*
+!*media/.gitkeep
+media/*
 
 log/debug.log  
 

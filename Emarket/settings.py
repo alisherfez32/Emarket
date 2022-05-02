@@ -52,15 +52,22 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
+    "http://localhost:80",
+    "http://localhost",
     "http://127.0.0.1:8000",
+    "http://127.0.0.1:80",
     "http://localhost:8081",
+    "http://35.158.203.11",
+    "http://172.26.2.171"
 ]
 
-<<<<<<< HEAD
-CSRF_TRUSTED_ORIGINS = ["http://localhost:1337", "http://localhost:80", "http://localhost:8000"]
-=======
-CSRF_TRUSTED_ORIGINS = ["http://localhost:1337", "http://localhost:80", "http://localhost:8000" ]
->>>>>>> 281c0755c44b15488398357ce01f15670db4516d
+CSRF_TRUSTED_ORIGINS = ["http://localhost:1337",
+                        "http://localhost:80",
+                        "http://127.0.0.1:80",
+                        "http://localhost",
+                        "http://localhost:8000",
+                        "http://35.158.203.11",
+                        "http://172.26.2.171", ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -135,7 +142,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/staticfiles/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # STATICFILES_DIRS = [STATIC_DIR]

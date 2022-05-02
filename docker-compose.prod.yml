@@ -9,22 +9,34 @@ services:
     expose:
       - 8000
     volumes:
-      - static_volume:/home/back/web/staticfiles
+      - static_volume:/home/back/web/static
       - media_volume:/home/back/web/media  
     env_file:
       - ./.env.prod
-    
+
+  vue:
+    build: 
+      context: ../emarket_vue
+      dockerfile: Dockerfile.prod
+    volumes:
+      - vue_dist:/back/dist
+    depends_on:
+     - web
+
   nginx:
     build: ./nginx
     ports:
      - 80:80
     volumes:
-      - static_volume:/home/back/web/staticfiles
+      - static_volume:/home/back/web/static
       - media_volume:/home/back/web/media
+      - vue_dist:/back/dist
     depends_on:
      - web
+     - vue
 
 volumes:
   static_volume:
   media_volume:
+  vue_dist:
      
